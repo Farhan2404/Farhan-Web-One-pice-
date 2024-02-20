@@ -1,0 +1,520 @@
+:root {
+  --primary: white;
+  --bg: #cf0a0a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  color: black;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  background-image: url(mangaku.png);
+  border-bottom: 1px solid #3a2f2f;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  font-style: italic;
+}
+
+.navbar-logo span {
+  color: #cf0a0a;
+  text-shadow: black 2px 2px 2px;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0.2rem;
+}
+
+.navbar .navbar-nav a .hamburger-menu {
+  color: white;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid white;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: gold;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(Backround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  bottom: 0;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: white;
+  text-shadow: red 2px 2px 2px;
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: black;
+  text-shadow: red 2px 2px 2px;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1.4rem;
+  line-height: 1.3rem;
+  font-weight: 300;
+  text-shadow: black 2px 2px 2px;
+  color: white;
+}
+
+.hero .content .cta {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.8rem;
+  box-shadow: 1px 2px 2px;
+}
+
+/* Supaya Tidak ada patahan pada cover */
+.hero::after {
+  content: ""; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, var(red) 10%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Captain Section */
+
+.Captain {
+  padding: 6rem 7% 1.4rem;
+  background-image: url(Backround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.Captain h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+}
+
+.Captain .row {
+  display: flex;
+}
+
+.Captain .row .Captain-img {
+  flex: 1 1 45rem;
+}
+
+.Captain .row .Captain-img img {
+  width: 40rem;
+  border: 2px solid black;
+}
+
+.Captain .row .content {
+  flex: 1 1 30rem;
+  padding: 0.1rem;
+}
+
+.Captain .row .content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: gold;
+  text-shadow: black 2px 2px 2px;
+}
+
+.Captain .row .content h3 span {
+  color: black;
+  text-shadow: white 2px 2px 2px;
+}
+
+.Captain .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 350;
+  line-height: 1.6;
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  border: 2px solid gold;
+}
+
+.Captain .row .content {
+  padding: 0;
+}
+
+.Captain .row .content h3 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+/* Crew Section */
+
+.crew {
+  padding: 4rem 7% 1.4rem;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  background-image: url(Backround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.crew h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  margin-bottom: 1rem;
+}
+
+.crew p {
+  text-align: center;
+  max-width: 20rem;
+  color: gold;
+  text-shadow: black 2px 2px 2px;
+  margin: auto;
+  font-size: 1.4rem;
+
+  line-height: 1.6;
+}
+
+.crew .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.crew .row .crew-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.crew .row .crew-card img {
+  width: 20rem;
+  border: 2px solid black;
+}
+
+.crew .row .crew-card title {
+  margin-top: 1rem auto 0.5rem;
+}
+
+/* Rival */
+
+.rival {
+  padding: 2rem 8% 1.4rem;
+  background-image: url(Backround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.rival h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  margin-bottom: 1rem;
+}
+
+.rival .row .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.rival .row .content h3 {
+  color: gold;
+  padding: 1.4rem;
+  font-size: 2rem;
+  text-shadow: black 2px 2px 2px;
+}
+
+.rival .row .content p {
+  color: black;
+  background-color: white;
+  border: 2px solid gold;
+  border-radius: 1px;
+  width: 70%;
+  padding: 1rem;
+  margin: auto;
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 150rem;
+  line-height: 1.6;
+}
+
+.rival .rival-card-image {
+  width: 40rem;
+  border: 2px solid black;
+}
+
+/* Kontak Section */
+
+.Kontak {
+  background-image: url(Backround.jpg);
+  padding: 2rem 8% 1.4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.Kontak h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-shadow: black 2px 2px 2px;
+  margin-bottom: 1rem;
+}
+
+.Kontak .row {
+  display: flex;
+  margin-top: 2rem;
+  background-image: black;
+}
+
+.Kontak .row .link {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Kontak .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.Kontak .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: white;
+  border: 2px solid black;
+  padding-left: 2rem;
+}
+
+.Kontak .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: black;
+}
+
+.Kontak .row form .button {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  background-image: url(mangaku.png);
+  text-align: center;
+  padding: 1rem 0 3rem;
+}
+
+footer .socials {
+  padding: 1rem;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0.5rem;
+}
+
+footer .socials a :hover {
+  color: gold;
+}
+
+footer .links {
+  margin-bottom: 0.3rem;
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a :hover {
+  color: gold;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: white
+}
+
+footer .credit a {
+  color: red;
+  text-shadow: black 2px 2px 2px;
+  font-weight: 800;
+}
+
+
+/* Media Queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30rem;
+    background-image: url(mangaku.png);
+    height: 100vh;
+    transition: 0.3s linear;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .Captain .row {
+    flex-wrap: wrap;
+  }
+
+  .Captain .row .Captain-img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .crew p {
+    font-size: 1.2rem;
+  }
+
+  .Kontak .row {
+    flex-wrap: wrap;
+  }
+
+  .Kontak .row .link {
+    height: 30rem;
+  }
+
+  .Kontak .row form {
+    padding-top: 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
